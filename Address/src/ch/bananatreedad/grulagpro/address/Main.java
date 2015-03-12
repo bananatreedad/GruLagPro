@@ -1,7 +1,5 @@
 package ch.bananatreedad.grulagpro.address;
 
-import ch.bananatreedad.grulagpro.address.Address.Country;
-
 /**
  * The main function which starts this program.
  * 
