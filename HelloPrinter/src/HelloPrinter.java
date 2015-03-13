@@ -7,9 +7,9 @@ public class HelloPrinter {
 		//System.out.println(5.5/0.0);
 		
 		System.out.println("+------------------------+");
-		System.out.println("| Jonathan Meier         |");
-		System.out.println("| Obere Bahnhofstrasse 58|");
-		System.out.println("| 8640 Rapperswil|       |");
+		System.out.println("| Johnny Meier           |");
+		System.out.println("| That Street there 1337 |");
+		System.out.println("| 9000 Coolest City Evar |");
 		System.out.println("+------------------------+");
 		
 	}

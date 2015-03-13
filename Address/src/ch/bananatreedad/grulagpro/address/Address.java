@@ -1,12 +1,14 @@
 package ch.bananatreedad.grulagpro.address;
 
 /**
- * An <code>Address</code> encapsulates all data which an Address holds.
+ * An <code>Address</code> encapsulates all data which an Address holds.<br>
+ * Additional there is a field called <code>oldAddress</code> which allows to
+ * save an old address.
  * 
  * @author seed@bananatreedad.ch
  * @version 1.0
  */
-public class Address {
+public class Address implements Cloneable {
 
 	private String name;
 	private String prename;
@@ -14,6 +16,7 @@ public class Address {
 	private int postalCode;
 	private String city;
 	private Country country;
+	private Address oldAddress;
 
 	/**
 	 * All allowed countries.
@@ -138,6 +141,29 @@ public class Address {
 	 */
 	public void setCountry(Country country) {
 		this.country = country;
+	}
+
+	/**
+	 * @return the oldAddress
+	 */
+	public Address getOldAddress() {
+		return oldAddress;
+	}
+
+	/**
+	 * @param oldAddress
+	 *            the oldAddress to set
+	 */
+	public void setOldAddress(Address oldAddress) {
+
+		try {
+			this.oldAddress = (Address) oldAddress.clone();
+			
+		} catch (CloneNotSupportedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 
 	/**
