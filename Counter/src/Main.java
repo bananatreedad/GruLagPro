@@ -1,5 +1,8 @@
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+
+import javax.swing.text.html.HTMLDocument.Iterator;
 
 /**
  * Main class to test {@link Counter}.
@@ -44,16 +47,16 @@ public class Main {
 		System.out.println("Value of counter1: " + counter1.getValue());
 
 		// create a list of counters
-		List<Counter> counterList = new ArrayList<Counter>();
+		Collection<Counter> counterList = new ArrayList<Counter>();
 		counterList.add(counter1);
 		counterList.add(counter2);
 		counterList.add(counter3);
 		counterList.add(counter4);
 		counterList.add(counter5);
 		counterList.add(counter6);
+
+		//added a comment
 		
-		System.out.println(counterList);
-	
 		// float test
 		float a = (float) 0.2;
 		float b = (float) 0.1;
