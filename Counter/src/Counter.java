@@ -15,20 +15,21 @@ public class Counter {
 	public void click() {
 		this.value++;
 	}
-	
+
 	/**
 	 * Returns the <code>value</code> of the <code>Counter</code>.
+	 * 
 	 * @return int Current <code>value</code> of <code>Counter</code>.
 	 */
 	public int getValue() {
 		return value;
 	}
-	
+
 	/**
 	 * Resets the <code>value</code> to zero.
 	 */
 	public void reset() {
 		this.value = 0;
 	}
-	
+
 }

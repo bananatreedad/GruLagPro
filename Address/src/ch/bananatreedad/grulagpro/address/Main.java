@@ -38,15 +38,6 @@ public class Main {
 		System.out.println("Old Address:");
 		System.out.println(ad1.getOldAddress());
 		
-		
-		List<Address> addressList = new ArrayList<Address>();
-		addressList.add(ad1);
-		addressList.add(ad2);
-		addressList.add(ad3);
-		addressList.add(ad4);
-		
-		//addressList.addAll(c)
-
 	}
 
 }

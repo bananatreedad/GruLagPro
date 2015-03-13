@@ -45,6 +45,9 @@ public class AdressTest {
 		ad1.setStreet("new street");
 		ad1.setPostalCode(9999);
 
+		// random test
+		assertTrue(0.2 + 0.1 != 0.3);
+
 	}
 
 }

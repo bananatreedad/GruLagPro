@@ -158,7 +158,7 @@ public class Address implements Cloneable {
 
 		try {
 			this.oldAddress = (Address) oldAddress.clone();
-			
+
 		} catch (CloneNotSupportedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
