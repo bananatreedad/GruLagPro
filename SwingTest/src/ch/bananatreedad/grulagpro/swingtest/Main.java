@@ -1,3 +1,4 @@
+package ch.bananatreedad.grulagpro.swingtest;
 import java.awt.Container;
 import java.awt.FlowLayout;
 
@@ -7,7 +8,7 @@ import javax.swing.JLabel;
 /**
  * Testclass for f.held which should explain functionality of FlowLayout.
  * 
- * @author jnt
+ * @author bananatreedad
  *
  */
 public class Main {
