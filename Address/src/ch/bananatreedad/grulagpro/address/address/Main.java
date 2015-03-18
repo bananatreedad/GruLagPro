@@ -1,9 +1,9 @@
-package ch.bananatreedad.grulagpro.address;
+package ch.bananatreedad.grulagpro.address.address;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ch.bananatreedad.grulagpro.address.Address.Country;
+import ch.bananatreedad.grulagpro.address.address.Address.Country;
 
 /**
  * The main function which starts this program.

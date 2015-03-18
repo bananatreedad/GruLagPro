@@ -1,4 +1,4 @@
-package ch.bananatreedad.grulagpro.address;
+package ch.bananatreedad.grulagpro.address.address;
 
 /**
  * An <code>Address</code> encapsulates all data which an Address holds.<br>

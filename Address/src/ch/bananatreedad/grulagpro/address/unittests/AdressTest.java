@@ -1,11 +1,11 @@
-package ch.bananatreedad.grulagpro.unittests;
+package ch.bananatreedad.grulagpro.address.unittests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ch.bananatreedad.grulagpro.address.Address;
-import ch.bananatreedad.grulagpro.address.Address.Country;
+import ch.bananatreedad.grulagpro.address.address.Address;
+import ch.bananatreedad.grulagpro.address.address.Address.Country;
 
 public class AdressTest {
 
