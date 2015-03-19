@@ -28,6 +28,8 @@ public class Main {
 		myFrame.add(jlbHelloWorld);
 		myFrame.add(jlbHelloWorld1);
 		myFrame.add(jlbHelloWorld3);
+		myFrame.add(jlbHelloWorld3);
+		myFrame.add(jlbHelloWorld3);
 
 		myFrame.setSize(100, 100);
 
