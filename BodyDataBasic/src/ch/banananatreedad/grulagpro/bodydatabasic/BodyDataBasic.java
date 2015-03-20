@@ -103,7 +103,7 @@ public class BodyDataBasic {
 	private int getIBWmen() {
 		double IBWunrounded = ((SIZE - 100) * 0.9);
 
-		return (int) Math.round(IBWunrounded);
+		return castLongToInt(Math.round(IBWunrounded));
 	}
 
 	/**
@@ -116,11 +116,31 @@ public class BodyDataBasic {
 	private int getIBWwomen() {
 		double IBWunrounded = ((SIZE - 100) * 0.8);
 
-		return (int) Math.round(IBWunrounded);
+		return castLongToInt(Math.round(IBWunrounded));
 	}
 
 	public enum Gender {
 		MALE, FEMALE;
+
+		/**
+		 * This function takes a String containing {@code 'm'} or {@code 'male'}
+		 * for a man or {@code 'f'} or {@code 'female'} for a woman and returns
+		 * the {@code BodyDataBasic.Gender} for this gender.
+		 * 
+		 * @param gender
+		 *            the gender
+		 * @return the gender in {@code BodyDataBasic.Gender}
+		 */
+		public static BodyDataBasic.Gender parseGender(String gender) {
+
+			if (gender.equals("m") || gender.equals("male")) {
+				return Gender.MALE;
+			} else if (gender.equals("f") || gender.equals("female")) {
+				return Gender.FEMALE;
+			}
+			throw new IllegalArgumentException(
+					"Valid arguments: 'm', 'male', 'f', 'female'");
+		}
 	}
 
 	/**
@@ -148,6 +168,37 @@ public class BodyDataBasic {
 	 *         on the base of the size.
 	 */
 	public int getNBW() {
-		return (int) Math.round(SIZE - 100);
+		return castLongToInt(Math.round(SIZE - 100));
+	}
+
+	/**
+	 * This function provides the possibility to cast a {@code long} to
+	 * {@code int} without a loss of data. If the given data is out of range of
+	 * the int-size it returns an {@code IllegalArgumentException}.
+	 * 
+	 * @param toBeCasted
+	 *            the long to cast to int
+	 * @return the int value of the given long
+	 * @throws IllegalArgumentException
+	 */
+	private static int castLongToInt(long toBeCasted)
+			throws IllegalArgumentException {
+
+		if (toBeCasted > Integer.MAX_VALUE || toBeCasted < Integer.MIN_VALUE) {
+			throw new IllegalArgumentException("Data would be lost if casted.");
+		}
+		return (int) toBeCasted;
+
+	}
+
+	/**
+	 * Returns the Object fomatted as the following string:<br>
+	 * ch.banananatreedad.grulagpro.bodydatabasic.BodyDataBasic@2b193f2dsize:
+	 * 180.0cm, weight: 72.0kg
+	 */
+	@Override
+	public String toString() {
+		return super.toString() + "size: " + SIZE + "cm, " + "weight: "
+				+ WEIGHT + "kg.";
 	}
 }

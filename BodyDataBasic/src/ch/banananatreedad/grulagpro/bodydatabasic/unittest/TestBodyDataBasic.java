@@ -28,6 +28,18 @@ public class TestBodyDataBasic {
 	}
 
 	@Test
+	public void testArithmeticxpressions() {
+		double test = 5 / 8;
+		System.out.println("5 / 8 = " + test);
+		assertTrue(test != 0.625);
+
+		test = 5 / 8.0;
+		System.out.println("5 / 8.0 = " + test);
+		assertTrue(test == 0.625);
+
+	}
+
+	@Test
 	public void testBMI() {
 		BodyDataBasic testData = new BodyDataBasic(183, 71);
 		System.out.println("BMI of a person with size 183cm and weight 71kg: "
