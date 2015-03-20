@@ -37,7 +37,7 @@ public class BodyDataBasic {
 	/**
 	 * Computes and returns the BSA <i>(Body Surface Area)</i> in m2 of the
 	 * person with the set {@code size} and {@code weight} as a double acurate
-	 * to 2 decimal places - for adults (age>= 22years).
+	 * to 2 decimal places - for adults {@code (age >= 22years)}.
 	 * 
 	 * @return the BSA in m2
 	 */
@@ -50,7 +50,7 @@ public class BodyDataBasic {
 	/**
 	 * Computes and returns the BSA <i>(Body Surface Area)</i> in m2 of the
 	 * person with the set {@code size} and {@code weight} as a double acurate
-	 * to 2 decimal places - for children (age < 7 years).
+	 * to 2 decimal places - for children {@code (age < 7 years)}.
 	 * 
 	 * @return the BSA in m2
 	 */
@@ -63,7 +63,7 @@ public class BodyDataBasic {
 	/**
 	 * Computes and returns the BSA <i>(Body Surface Area)</i> in m2 of the
 	 * person with the set {@code size} and {@code weight} as a double acurate
-	 * to 2 decimal places - for young Adults (17 <= age < 22 years).
+	 * to 2 decimal places - for young Adults {@code (17 <= age < 22 years)}.
 	 * 
 	 * @return the BSA in m2
 	 */
