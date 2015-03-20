@@ -70,15 +70,19 @@ public class TestBodyDataBasic {
 
 	}
 
-	@Test
-	public void testIBW() {
-		BodyDataBasic testNormalWoman = new BodyDataBasic(165, 60);
+	@Test(expected = Exception.class)
+	public void testIBW() throws Exception {
+		BodyDataBasic testNormalWoman = new BodyDataBasic(200, 60);
+
 		int ibw = testNormalWoman.getIBWperson(Gender.FEMALE);
+
 		System.out.println("IBW of a woman with the size 165cm: " + ibw);
 		assertTrue(ibw == 52);
 
 		BodyDataBasic testNormalMan = new BodyDataBasic(175, 70);
+
 		ibw = testNormalMan.getIBWperson(Gender.MALE);
+
 		System.out.println("IBW of a man with the size 175cm: " + ibw);
 		assertTrue(ibw == 68);
 	}

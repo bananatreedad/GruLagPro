@@ -151,7 +151,12 @@ public class BodyDataBasic {
 	 *            the gender
 	 * @return the IBW
 	 */
-	public int getIBWperson(Gender gender) {
+	public int getIBWperson(Gender gender) throws Exception {
+
+		if (SIZE >= 190 || SIZE <= 160) {
+			throw new Exception("The size has to be between 190 and 160 cm for reliable IBW calculation.");
+		}
+
 		if (gender == Gender.FEMALE) {
 			return getIBWwomen();
 		} else if (gender == Gender.MALE) {

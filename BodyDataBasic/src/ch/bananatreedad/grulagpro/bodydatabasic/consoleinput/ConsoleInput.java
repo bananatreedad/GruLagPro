@@ -27,9 +27,15 @@ public class ConsoleInput {
 		BodyDataBasic data = new BodyDataBasic(gotTheSize, gotTheWeight);
 
 		System.out.printf("\nBMI:%10.1f", data.getBMI());
-		System.out.printf("\nBSA:%10.1f", data.getBSAofAnyPerson(gotTheAge));
-		System.out.printf("\nIBW:%10d", data.getIBWperson(gender));
-		System.out.printf("\nNBW:%10d", data.getNBW());
+		System.out.printf("\nBSA:%10.1f m2", data.getBSAofAnyPerson(gotTheAge));
+
+		try {
+			System.out.printf("\nIBW:%10d kg", data.getIBWperson(gender));
+		} catch (Exception e) {
+			System.out
+					.printf("\nIBW is not computable - size conforms not to the standard value.");
+		}
+		System.out.printf("\nNBW:%10d kg", data.getNBW());
 
 	}
 
