@@ -53,3 +53,8 @@ f.settings/
 
 .recommenders/*
 */doc/
+
+#folders which are only for me
+/LamdaTest/
+/Log4JTester/
+/SFConnectionTest/
