@@ -1,25 +1,45 @@
 package ch.banananatreedad.grulagpro.bodydatabasic;
 
-public class BodyDataBasic {
+/**
+ * This class encapsulates the body data of a human person. <br>
+ * These are:
+ * <ul>
+ * <li>the persons size</li>
+ * <li>the persons weight</li>
+ * <li>the persons gender</li>
+ * <li>the persons age</li>
+ * </ul>
+ * 
+ * 
+ * @author bananatreedad
+ * @version 2.0
+ *
+ */
+public class BodyData {
 
     final private double SIZE;
     final private double WEIGHT;
-
-    public static String test = "wazzap";
+    final private BodyData.Gender GENDER;
+    final private int AGE;
 
     /**
-     * Constructs a <code>BodyDataBasic</code> with <b>unchangable</b>
-     * <code>size</code> in cm and <code>weight</code> in kg.
+     * Construcs a <code>BodyData</code> with <b>unchangable</b> content.
      * 
      * @param size
-     *            size of a person in centimeters
+     *            The size in centimetres.
      * @param weight
-     *            weight of a person in kilograms
+     *            The weight in kilograms.
+     * @param gender
+     *            The gender - 'm' for male or 'f' for female.
+     * @param age
+     *            The age in years.
      */
-    public BodyDataBasic(double size, double weight) {
+    public BodyData(double size, double weight, BodyData.Gender gender, int age) {
 	super();
 	this.SIZE = size;
 	this.WEIGHT = weight;
+	this.GENDER = gender;
+	this.AGE = age;
     }
 
     /**
@@ -41,7 +61,7 @@ public class BodyDataBasic {
      * 
      * @return the BSA in m2
      */
-    public double getBSAadults() {
+    private double getBSAadults() {
 	double bsa = ((Math.pow(WEIGHT, 0.425) * Math.pow(SIZE, 0.725)) * 71.84) / 10000;
 
 	return Double.parseDouble(String.format("%.2f", bsa));
@@ -54,7 +74,7 @@ public class BodyDataBasic {
      * 
      * @return the BSA in m2
      */
-    public double getBSAchildren() {
+    private double getBSAchildren() {
 	double bsa = Math.sqrt(WEIGHT * SIZE / 3600);
 
 	return Double.parseDouble(String.format("%.2f", bsa));
@@ -67,30 +87,29 @@ public class BodyDataBasic {
      * 
      * @return the BSA in m2
      */
-    public double getBSAyoungAdults() {
+    private double getBSAyoungAdults() {
 	return Double.parseDouble(String.format("%.2f",
 		(getBSAchildren() + getBSAadults()) / 2));
     }
 
     /**
-     * Returns the BSA <i>(Body Surface Area</i> of any person with a specific
-     * age.
+     * Calculates the BSA <i>(Body Surface Area</i> out of the given body data.
      * 
      * @param age
      *            the age of the given person
      * @return the BSA in m2
      */
-    public double getBSAofAnyPerson(int age) {
-	if (age >= 22) {
+    public double getBSA() {
+
+	if (this.AGE >= 22) {
 	    return getBSAadults();
-	} else if (age < 17) {
+	} else if (this.AGE < 17) {
 	    return getBSAchildren();
-	} else if (age >= 17 && age < 22) {
+	} else if (this.AGE >= 17 && this.AGE < 22) {
 	    return getBSAyoungAdults();
 	} else
 	    throw new IllegalArgumentException(
 		    "No idea how you could enter an int with this value.. :|");
-
     }
 
     /**
@@ -120,7 +139,7 @@ public class BodyDataBasic {
     }
 
     public enum Gender {
-	MALE, FEMALE;
+	MALE, FEMALE, UNSPECIFIED;
 
 	/**
 	 * This function takes a String containing {@code 'm'} or {@code 'male'}
@@ -131,36 +150,35 @@ public class BodyDataBasic {
 	 *            the gender
 	 * @return the gender in {@code BodyDataBasic.Gender}
 	 */
-	public static BodyDataBasic.Gender parseGender(String gender) {
+	public static BodyData.Gender parseGender(String gender) {
 
 	    if (gender.equals("m") || gender.equals("male")) {
 		return Gender.MALE;
 	    } else if (gender.equals("f") || gender.equals("female")) {
 		return Gender.FEMALE;
-	    }
-	    throw new IllegalArgumentException(
-		    "Valid arguments: 'm', 'male', 'f', 'female'");
+	    } else
+		return Gender.UNSPECIFIED;
 	}
     }
 
     /**
-     * Computes and returns the IBW <i>Ideal Body Weight</i> of a men or a
-     * woman.
+     * Calculates and returns the IBW <i>Ideal Body Weight</i> out of the actual
+     * body data.
      * 
      * @param gender
      *            the gender
      * @return the IBW
      */
-    public int getIBWperson(Gender gender) throws Exception {
+    public int getIBW() throws Exception {
 
 	if (SIZE >= 190 || SIZE <= 160) {
 	    throw new Exception(
 		    "The size has to be between 190 and 160 cm for reliable IBW calculation.");
 	}
 
-	if (gender == Gender.FEMALE) {
+	if (this.GENDER == Gender.FEMALE) {
 	    return getIBWwomen();
-	} else if (gender == Gender.MALE) {
+	} else if (this.GENDER == Gender.MALE) {
 	    return getIBWmen();
 	} else
 	    throw new IllegalArgumentException("No valid gender as argument.");
@@ -200,11 +218,18 @@ public class BodyDataBasic {
     /**
      * Returns the Object fomatted as the following string:<br>
      * ch.banananatreedad.grulagpro.bodydatabasic.BodyDataBasic@2b193f2dsize:
-     * 180.0cm, weight: 72.0kg
+     * 180.0cm, weight: 72.0kg, age: 22 years, gender: male
      */
     @Override
     public String toString() {
-	return super.toString() + "size: " + SIZE + "cm, " + "weight: "
-		+ WEIGHT + "kg.";
+	String gender = "male";
+	if (this.GENDER == Gender.FEMALE) {
+	    gender = "female";
+	} else if (this.GENDER == Gender.UNSPECIFIED) {
+	    gender = "UNSPECIFIED";
+	}
+
+	return "size: " + SIZE + "cm, " + "weight: "
+		+ WEIGHT + "kg, age: " + AGE + " years, gender: " + gender;
     }
 }
