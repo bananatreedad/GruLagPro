@@ -117,8 +117,22 @@ public class TestBodyData {
 
     }
 
+    /**
+     * Tests the functionality of {@code BodyData.getIBW()}
+     */
     @Test
     public void testIBW() {
-	//TODO: similiar to other functions
+
     }
+
+    /**
+     * Tests the functionality of {@code BodyData.getNBW()}
+     */
+    @Test
+    public void testNBW() {
+	int nbw = testDataNormalFemaleAdult.getNBW();
+	System.out.println("testDataNormalFemaleAdult.getNBW(): " + nbw);
+	assertTrue(nbw == 70);
+    }
+
 }
