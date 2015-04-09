@@ -1,12 +1,12 @@
-package ch.banananatreedad.grulagpro.bodydatabasic.unittest;
+package ch.bananatreedad.grulagpro.bodydatabasic.unittest;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 import org.junit.experimental.theories.suppliers.TestedOn;
 
-import ch.banananatreedad.grulagpro.bodydatabasic.BodyData;
-import ch.banananatreedad.grulagpro.bodydatabasic.BodyData.Gender;
+import ch.bananatreedad.grulagpro.bodydatabasic.BodyData;
+import ch.bananatreedad.grulagpro.bodydatabasic.BodyData.Gender;
 
 public class TestBodyData {
 
@@ -122,7 +122,7 @@ public class TestBodyData {
      */
     @Test
     public void testIBW() {
-
+	
     }
 
     /**
@@ -134,5 +134,4 @@ public class TestBodyData {
 	System.out.println("testDataNormalFemaleAdult.getNBW(): " + nbw);
 	assertTrue(nbw == 70);
     }
-
 }

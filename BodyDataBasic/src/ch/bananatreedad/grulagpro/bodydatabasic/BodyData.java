@@ -1,4 +1,4 @@
-package ch.banananatreedad.grulagpro.bodydatabasic;
+package ch.bananatreedad.grulagpro.bodydatabasic;
 
 /**
  * This class encapsulates the body data of a human person. <br>
@@ -53,7 +53,7 @@ public class BodyData {
 
 	return Double.parseDouble(String.format("%.2f", bmi));
     }
-
+    
     /**
      * Computes and returns the BSA <i>(Body Surface Area)</i> in m2 of the
      * person with the set {@code size} and {@code weight} as a double acurate

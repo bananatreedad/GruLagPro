@@ -2,8 +2,8 @@ package ch.bananatreedad.grulagpro.bodydatabasic.consoleinput;
 
 import java.util.Scanner;
 
-import ch.banananatreedad.grulagpro.bodydatabasic.BodyData;
-import ch.banananatreedad.grulagpro.bodydatabasic.BodyData.Gender;
+import ch.bananatreedad.grulagpro.bodydatabasic.BodyData;
+import ch.bananatreedad.grulagpro.bodydatabasic.BodyData.Gender;
 
 public class ConsoleInput {
 
@@ -33,11 +33,9 @@ public class ConsoleInput {
 	try {
 	    System.out.printf("\nIBW:%10d kg", data.getIBW());
 	} catch (Exception e) {
-	    System.out
-		    .printf("\nIBW is not computable - size conforms not to the standard value.");
+	    System.out.printf("\nIBW is not computable - size conforms not to the standard value.");
 	}
+
 	System.out.printf("\nNBW:%10d kg", data.getNBW());
-
     }
-
 }
