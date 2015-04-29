@@ -1,4 +1,4 @@
-# GruLagPro
+﻿# GruLagPro
 Projects and tests during the module "Grundlagen Programmieren" @BFH.
 
 This repo is for everyone out of our class and contains tests as sample solutions for all excersises in class ( RGH1 - BTX8051 - X1r | Einführung in die Programmierung - 15).<br>
@@ -11,3 +11,4 @@ This repo is for everyone out of our class and contains tests as sample solution
 Übung 3 - **BMICalculator**<br>
 Übung 4 - **Address**<br>
 Übung 5 - **BodyDataBasic**<br>
+
