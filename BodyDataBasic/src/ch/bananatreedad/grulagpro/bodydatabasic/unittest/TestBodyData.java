@@ -114,7 +114,6 @@ public class TestBodyData {
 	bsa = testDataNormalMaleTeen.getBSA();
 	System.out.println("testDataNormalMaleTeen.getBSA(): " + bsa);
 	assertTrue(bsa == 1.91);
-
     }
 
     /**
@@ -122,7 +121,7 @@ public class TestBodyData {
      */
     @Test
     public void testIBW() {
-	
+
     }
 
     /**
