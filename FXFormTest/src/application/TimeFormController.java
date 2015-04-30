@@ -43,7 +43,7 @@ public class TimeFormController {
 	if (event.getCode() == KeyCode.ENTER) {
 	    writeToConsole();
 	    counterField.setText("");
-	    //disableElements();
+	    // disableElements();
 	}
     }
 
