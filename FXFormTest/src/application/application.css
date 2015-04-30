@@ -1,0 +1,10 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#myConsole .content {
+	-fx-background-color: lightgrey;
+} 
+
+#myConsole {
+	-fx-font-family: "Courier New";
+	-fx-padding: 10px;
+}

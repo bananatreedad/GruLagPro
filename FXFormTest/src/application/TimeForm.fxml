@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.2989949748743719" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TimeFormController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="598.0">
+         <children>
+            <TextField fx:id="counterField" layoutX="180.0" layoutY="53.0" onKeyReleased="#keyOnField" />
+            <Label layoutX="180.0" layoutY="37.0" text="loop count" />
+            <Button fx:id="myButton" layoutX="360.0" layoutY="53.0" mnemonicParsing="false" onAction="#handleEnterButtonEvent" text="Go!" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TextArea fx:id="myConsole" editable="false" layoutX="64.0" layoutY="-28.0" prefHeight="195.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
