@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bananatreedad.bfh.java.ArrayListTest.MainFormController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="myButton" layoutX="80.0" layoutY="130.0" mnemonicParsing="false" onAction="#buttonPress" text="add" />
+            <TextField fx:id="myStringTextField" layoutX="19.0" layoutY="56.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
