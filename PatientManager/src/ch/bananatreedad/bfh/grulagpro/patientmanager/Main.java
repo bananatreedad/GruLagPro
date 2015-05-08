@@ -1,4 +1,4 @@
-package ch.bananatreedad.bfh.grulagpro.patient.application;
+package ch.bananatreedad.bfh.grulagpro.patientmanager;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
