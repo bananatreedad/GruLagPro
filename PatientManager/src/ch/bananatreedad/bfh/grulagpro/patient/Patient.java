@@ -22,7 +22,8 @@ public class Patient {
     private String dateOfBirth;
     private char gender;
     private Address address;
-
+    private ArrayList<PatientCase> caseList;
+    
     /**
      * Constructs a Patient with the given parameters as properties. <br>
      * 
@@ -30,7 +31,6 @@ public class Patient {
      *            - Patient Identification Number.
      * @param aFirstName
      *            - First name of a patient.
-     * @param aName
      *            - Name of a patient.
      * @param aDateOfBirth
      *            - Date of birth of a patient (Format: dd.mm.yyyy).
@@ -59,7 +59,6 @@ public class Patient {
     }
 
     /**
-     * Adds a PatientCase for this Patient. <br>
      * 
      * @param aCaseID
      * @param anAdmReason
@@ -70,25 +69,16 @@ public class Patient {
     public void addCase(long aCaseID, String anAdmReason, String anAdmDate,
 	    int aSize, int aWeight) {
 
-    }
+	PatientCase newCase = new PatientCase(aCaseID, anAdmReason, anAdmDate,
+		aSize, aWeight, anAdmReason, this.gender);
 
-    /**
-     * Returns all PatientCase objects of this Patient. <br>
-     * 
-     */
-    public ArrayList<PatientCase> getAllCases() {
-	// TODO
-	return null;
-    }
-
-    /**
-     * Returns a PatientCase of this Patient. <br>
-     * 
-     * @param aCaseID
-     * @return
+	caseList.add(newCase);
      */
     public PatientCase getCase(int aCaseID) {
-	// TODO
+	for (PatientCase patientCase : caseList) {
+	    if (patientCase.getCaseID() == aCaseID)
+		return patientCase;
+	}
 	return null;
     }
 
@@ -98,8 +88,7 @@ public class Patient {
      * @return
      */
     public String getDateOfBirth() {
-	// TODO
-	return "";
+	return this.dateOfBirth;
     }
 
     /**
@@ -107,8 +96,7 @@ public class Patient {
      * 
      */
     public String getFirstName() {
-	// TODO
-	return "";
+	return this.firstName;
     }
 
     /**
@@ -141,8 +129,10 @@ public class Patient {
      * @param aStreetNumber
      */
     public void setAddress(String aStreet, String aStreetNumber,
-	    String aPostalCode, String aCity) {
-	// TODO
+	    int aPostalCode, String aCity) {
+	this.address = new Address(this.name, this.firstName, aStreet + " "
+		+ aStreetNumber, aPostalCode, aCity,
+		Address.Country.SWITZERLAND);
     }
 
     /**
@@ -152,7 +142,7 @@ public class Patient {
      * @param aDate
      */
     public void setDateOfLastMenstrualPeriod(int aCaseID, String aDate) {
-	// TODO
+	//TODO
     }
 
     /**
@@ -161,7 +151,8 @@ public class Patient {
      * @param aName
      * @param aFirstName
      */
-    public void setName(String aName, String aFirstName /**
+    public void setName(String aName, String aFirstName 
+    /**
      * had to add additional
      * param
      **/
