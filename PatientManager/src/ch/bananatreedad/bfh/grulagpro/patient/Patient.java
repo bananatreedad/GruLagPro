@@ -39,8 +39,8 @@ public class Patient {
      * @param anAddress
      *            - Address of a patient.
      */
-    public Patient(long aPIN, String aFirstName, String aName, String aDateOfBirth,
-	    char aGender, Address anAddress) {
+    public Patient(long aPIN, String aFirstName, String aName,
+	    String aDateOfBirth, char aGender, Address anAddress) {
 
 	this.pin = aPIN;
 	this.firstName = aFirstName;
@@ -67,8 +67,8 @@ public class Patient {
      * @param aSize
      * @param aWeight
      */
-    public void addCase(long aCaseID, String anAdmReason, String anAdmDate, int aSize,
-	    int aWeight) {
+    public void addCase(long aCaseID, String anAdmReason, String anAdmDate,
+	    int aSize, int aWeight) {
 
     }
 
@@ -77,7 +77,7 @@ public class Patient {
      * 
      */
     public ArrayList<PatientCase> getAllCases() {
-	//TODO
+	// TODO
 	return null;
     }
 
@@ -88,7 +88,7 @@ public class Patient {
      * @return
      */
     public PatientCase getCase(int aCaseID) {
-	//TODO
+	// TODO
 	return null;
     }
 
@@ -98,15 +98,16 @@ public class Patient {
      * @return
      */
     public String getDateOfBirth() {
-	//TODO
-	return ""; }
+	// TODO
+	return "";
+    }
 
     /**
      * Returns the first name of this Patient. <br>
      * 
      */
     public String getFirstName() {
-	//TODO
+	// TODO
 	return "";
     }
 
@@ -139,9 +140,9 @@ public class Patient {
      * @param aStreet
      * @param aStreetNumber
      */
-    public void setAddress(String aStreet, String aStreetNumber, String aPostalCode,
-	    String aCity) {
-	//TODO
+    public void setAddress(String aStreet, String aStreetNumber,
+	    String aPostalCode, String aCity) {
+	// TODO
     }
 
     /**
@@ -151,7 +152,7 @@ public class Patient {
      * @param aDate
      */
     public void setDateOfLastMenstrualPeriod(int aCaseID, String aDate) {
-	//TODO
+	// TODO
     }
 
     /**
@@ -160,7 +161,11 @@ public class Patient {
      * @param aName
      * @param aFirstName
      */
-    public void setName(String aName, String aFirstName /**had to add additional param**/) {
+    public void setName(String aName, String aFirstName /**
+     * had to add additional
+     * param
+     **/
+    ) {
 	this.name = aName;
 	this.firstName = aFirstName;
     }
@@ -182,14 +187,12 @@ public class Patient {
      * city: Examplehausen
      */
     public String toString() {
-	return ("Patient Object: \n"
-		+ "PIN:	\t\t" + this.pin + "\n"
-		+ "first name: \t\t" + this.firstName + "\n"
-		+ "lastname: \t\t"+ this.name + "\n"
-		+ "date of birth: \t\t"+ this.dateOfBirth + "\n"
-		+ "gender: \t\t"+ this.gender + "\n"
-		+ "street: \t\t"+ this.address.getStreet() + "\n"
-		+ "postal code:	\t"+ this.address.getPostalCode() + "\n"
-		+ "city: \t\t\t"+ this.address.getCity());
+	return ("Patient Object: \n" + "PIN:	\t\t" + this.pin + "\n"
+		+ "first name: \t\t" + this.firstName + "\n" + "lastname: \t\t"
+		+ this.name + "\n" + "date of birth: \t\t" + this.dateOfBirth
+		+ "\n" + "gender: \t\t" + this.gender + "\n" + "street: \t\t"
+		+ this.address.getStreet() + "\n" + "postal code:	\t"
+		+ this.address.getPostalCode() + "\n" + "city: \t\t\t" + this.address
+		    .getCity());
     }
 }

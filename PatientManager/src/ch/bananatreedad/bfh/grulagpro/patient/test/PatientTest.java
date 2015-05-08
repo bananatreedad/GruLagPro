@@ -15,14 +15,16 @@ import ch.bananatreedad.grulagpro.address.address.Address;
  *
  */
 public class PatientTest {
-    
+
     private long currentId = -1L;
 
     @Test
     public void testToString() {
-	Address address = new Address("Meier", "Jonathan", "Teststr. 4", 9999, "Examplehausen", Address.Country.SWITZERLAND); 
-	Patient patient = new Patient(getNextId(), address.getPrename(), address.getName(), "16.04.1992", 'm', address);
-	
+	Address address = new Address("Meier", "Jonathan", "Teststr. 4", 9999,
+		"Examplehausen", Address.Country.SWITZERLAND);
+	Patient patient = new Patient(getNextId(), address.getPrename(),
+		address.getName(), "16.04.1992", 'm', address);
+
 	System.out.println(patient);
     }
 
