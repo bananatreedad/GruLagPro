@@ -39,12 +39,12 @@ public class Patient {
      * @param anAddress
      *            - Address of a patient.
      */
-    Patient(long aPIN, String aFirstName, String aName, String aDateOfBirth,
+    public Patient(long aPIN, String aFirstName, String aName, String aDateOfBirth,
 	    char aGender, Address anAddress) {
 
 	this.pin = aPIN;
 	this.firstName = aFirstName;
-	this.name = aFirstName;
+	this.name = aName;
 	this.dateOfBirth = aDateOfBirth;
 	this.gender = aGender;
 	this.address = anAddress;
@@ -183,13 +183,13 @@ public class Patient {
      */
     public String toString() {
 	return ("Patient Object: \n"
-		+ "PIN:			" + this.pin + "\n"
-		+ "first name: 		" + this.firstName + "\n"
-		+ "lastname:		"+ this.name + "\n"
-		+ "date of birth:	"+ this.dateOfBirth + "\n"
-		+ "gender:		"+ this.gender + "\n"
-		+ "street: 		"+ this.address.getStreet() + "\n"
-		+ "postal code: 	"+ this.address.getPostalCode() + "\n"
-		+ "city:		"+ this.address.getCity());
+		+ "PIN:	\t\t" + this.pin + "\n"
+		+ "first name: \t\t" + this.firstName + "\n"
+		+ "lastname: \t\t"+ this.name + "\n"
+		+ "date of birth: \t\t"+ this.dateOfBirth + "\n"
+		+ "gender: \t\t"+ this.gender + "\n"
+		+ "street: \t\t"+ this.address.getStreet() + "\n"
+		+ "postal code:	\t"+ this.address.getPostalCode() + "\n"
+		+ "city: \t\t\t"+ this.address.getCity());
     }
 }
