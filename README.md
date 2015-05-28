@@ -11,5 +11,4 @@ This repo is for everyone out of our class and contains tests as sample solution
 Übung 3 - **BMICalculator**<br>
 Übung 4 - **Address**<br>
 Übung 5 - **BodyDataBasic**<br>
-.. will be updated soon
 
